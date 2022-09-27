@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed&display=swap');
+$sides: 10%;
+$main_color: azure;
+
+body {
+  color: $main_color;
+  margin: 50px $sides;
+  background-color: rgb(108, 127, 158);
+  font-family: 'Fira Sans Condensed', sans-serif;
+}
+
+.table {
+  &_header {
+    &_elem {
+      padding: 10px 0;
+      background-color: rgb(48, 48, 48);
+      border: solid 1px #489fb0;
+      margin: 0;
+      text-align: center;
+    }
+  }
+
+  &_body {
+    &_elem {
+      padding: 0.3em;
+      margin: 0;
+      border: solid 1px #2a5d67;
+      background-color: rgb(34, 34, 34);
+
+      &:nth-child(1n+3) {text-align: center;}
+    }
+  }
+
+  &_body,
+  &_header {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+  }
+}
+
+.search {
+  margin: 50px auto;
+
+  input,
+  select {
+    color: $main_color;
+    background-color: rgb(44, 57, 60);
+    border: solid 2px #2a5d67;
+    padding: 5px;
+  }
+
+  h3 {
+    margin-bottom: 5px;
+    padding: 0.2em;
+    width: 30%;
+    color:rgb(0, 0, 0);
+    border-bottom: solid 2px;
+  }
+}

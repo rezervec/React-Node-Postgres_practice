@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed&display=swap");
+body {
+  color: azure;
+  margin: 50px 10%;
+  background-color: rgb(108, 127, 158);
+  font-family: "Fira Sans Condensed", sans-serif;
+}
+
+.table_header_elem {
+  padding: 10px 0;
+  background-color: rgb(48, 48, 48);
+  border: solid 1px #489fb0;
+  margin: 0;
+  text-align: center;
+}
+.table_body_elem {
+  padding: 0.3em;
+  margin: 0;
+  border: solid 1px #2a5d67;
+  background-color: rgb(34, 34, 34);
+}
+.table_body_elem:nth-child(1n+3) {
+  text-align: center;
+}
+.table_body, .table_header {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr;
+}
+
+.search {
+  margin: 50px auto;
+}
+.search input,
+.search select {
+  color: azure;
+  background-color: rgb(44, 57, 60);
+  border: solid 2px #2a5d67;
+  padding: 5px;
+}
+.search h3 {
+  margin-bottom: 5px;
+  padding: 0.2em;
+  width: 30%;
+  color: rgb(0, 0, 0);
+  border-bottom: solid 2px;
+}
