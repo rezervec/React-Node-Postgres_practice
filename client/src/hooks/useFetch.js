@@ -11,7 +11,9 @@ export const useFetch = (callback) => {
     } catch (e) {
       setError(e.message)
     } finally {
-      setLoading(false)
+      setTimeout(() => {
+        setLoading(false)
+      }, 500)
     }
   }
   return [fetchData, loading, error]

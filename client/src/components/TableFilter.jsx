@@ -14,18 +14,21 @@ const TableFilter = ({filter, setFilter}) => {
           {value: 'data', name: 'Дата'},
           {value: 'title', name: 'Название'},
           {value: 'amount', name: 'Количество'},
-          {value: 'distance', name: 'Дистанция'},
+          {value: 'distance', name: 'Расстояние'},
         ]}
       />
       <SelectAction
         value={filter.action}
         onChange = {e => setFilter({...filter, action: e})}
-        options = {[
-          {value: 'equals', name: 'Ровно'},
-          {value: 'includes', name: 'Содержит'},
-          {value: 'more', name: 'Больше'},
-          {value: 'less', name: 'Меньше'},
-        ]}
+        options = {filter.column != ''
+        ? [
+            {value: 'equals', name: 'Ровно'},
+            {value: 'includes', name: 'Содержит'},
+            {value: 'more', name: 'Больше'},
+            {value: 'less', name: 'Меньше'},
+          ]
+        : []
+        }
       />
       <input
         placeholder="Значение"

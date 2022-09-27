@@ -1,0 +1,25 @@
+.pagination {
+  display: block;
+  margin: 10px auto;
+  width: 100%;
+}
+
+.activePage,
+.allPages {
+  padding: 5px 10px;
+  border: solid 1px;
+  margin-left: 10px;
+  background-color: rgba(127, 255, 212, 0.3);
+  cursor: pointer;
+  transition: .2s;
+}
+
+.allPages:hover {
+  background-color: rgba(127, 255, 212, 0.7);
+}
+
+.activePage {
+  background-color: rgb(91, 222, 222);
+  color: black;
+  cursor: default;
+}
