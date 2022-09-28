@@ -1,5 +1,6 @@
 import { useMemo } from "react"
 
+// создаём массив с номерами страниц
 export const usePagination = (pagesAmount) => {
   const pagination = useMemo(() => {
     let pagesArray = []
@@ -7,7 +8,7 @@ export const usePagination = (pagesAmount) => {
       pagesArray.push(i + 1)
     }
     return pagesArray
-  }, [pagesAmount])
+  }, [pagesAmount]) // обновляем массив при изменении кол-ва страниц
   
   return pagination
 }

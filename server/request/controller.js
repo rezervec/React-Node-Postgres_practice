@@ -1,9 +1,9 @@
-const testData = require("./testData")
+const db = require('../db/db')
 
 class Controller {
   async getInfo(req, res) {
-    console.log('GET INFO')
-    return res.json(testData)
+    const rows = await db.query('SELECT * FROM rowtable')
+    res.send(rows)
   }
 }
 

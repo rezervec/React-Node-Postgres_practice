@@ -1,5 +1,6 @@
 import React from 'react'
 
+// создаём селектор "Колонка"
 const SelectColumn = ({options, value, onChange}) => {
   return (
     <select

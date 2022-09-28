@@ -4,6 +4,7 @@ export const useFetch = (callback) => {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
 
+  // обрабатываем callback-функцию
   const fetchData = async () => {
     try {
       setLoading(true)
@@ -13,7 +14,7 @@ export const useFetch = (callback) => {
     } finally {
       setTimeout(() => {
         setLoading(false)
-      }, 500)
+      }, 500) // делаем искусственную задержку в пол-секунды, убрать при диплое!
     }
   }
   return [fetchData, loading, error]

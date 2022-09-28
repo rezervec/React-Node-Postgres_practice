@@ -3,6 +3,8 @@ import SelectAction from './select/SelectAction'
 import SelectColumn from './select/SelectColumn'
 import style from '../styles/MainPage.module.css'
 
+// отрисовываем селекторы и поле ввода
+// передаём опции и связываем, выбранные пользователем значения, с нашим приложением
 const TableFilter = ({filter, setFilter}) => {
   return (
     <div className={style.search}>

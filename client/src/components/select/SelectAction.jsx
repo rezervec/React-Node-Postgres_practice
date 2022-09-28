@@ -1,5 +1,6 @@
 import React from 'react'
 
+// создаём селектор "Действие"
 const SelectAction = ({options, value, onChange}) => {
   return (
     <select

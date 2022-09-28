@@ -4,7 +4,7 @@ const pool = new Pool({
   password: '123',
   host: "localhost",
   port: 5432,
-  database: "node_app_postgres"
+  database: "react_node_postgres"
 })
 
 module.exports = pool

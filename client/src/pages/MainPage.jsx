@@ -11,23 +11,28 @@ import Pagination from '../components/UI/pagination/Pagination'
 
 const MainPage = () => {
 
-  const [rows, setRows] = useState([])
-  const [limitRows, setLimitRows] = useState(5)
-  const [filter, setFilter] = useState({column:'', action:'', input:''})
-  const [pagesAmount, setPagesAmount] = useState(3)
-  const [activePage, setActivePage] = useState(1)
+  const [rows, setRows] = useState([]) // массив с нашими рядами таблицы
+  const [limitRows, setLimitRows] = useState(5) // кол-во рядов на странице
+  const [filter, setFilter] = useState({column:'', action:'', input:''}) // данные фильтрации рядов
+  const [pagesAmount, setPagesAmount] = useState(0) // кол-во страниц
+  const [activePage, setActivePage] = useState(1) // активная страница
 
+  // получаем данные и состояние промиса с помощью кастомного хука useFetch
   const [fetchData, loading, error] = useFetch(async () => {
+    // getRows отправляет get-запрос на сервис и возвращает массив с нашими рядами
     const data = await getRows()
-    setPagesAmount(Math.ceil(data.length / limitRows))
+    // записываем полученные ряды в rows
     setRows(data)
   })
 
   useEffect(() => {
+    // в 'loading' будет хранится состояние промиса, в 'error' ошибки
     fetchData()
   }, [])
 
-  let sortedRows = useSort(rows, filter, activePage, limitRows)
+  // вызовим кастомный хук, который запишет отсортированный массив, на основаниии фильтров,
+  // а также хук вернёт количество страниц после сортировки
+  const sortedRows = useSort(rows, filter, activePage, limitRows, {setPagesAmount})
 
   return (
     <div>
