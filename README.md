@@ -15,14 +15,14 @@
 - password: *"ваш пароль от Postgres"*
 - port: *"ваш порт Postgres"*
 - database: *"имя созданной БД"*
-5. В ```url.js``` выбираем порт и домен, на котором будет открываться наше приложение, *у меня http://localhost:5000*.
+5. В ```url.js``` выбираем порт и домен, на котором будет открываться наше приложение, *у меня localhost:5000*.
 6. ```npm start```
 
 ---
 
 ###### Открываем Postgres в PowerShell.
 ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
-1. ```create database react_node_postgres;``` *('node_app_postgres' - название БД)*
+1. ```create database react_node_postgres;``` *('react_node_postgres' - название БД)*
 2. ```\connect react_node_postgres;```
 3. Открываем файл проекта ```server/db/db.sql``` - отправляем запрос на создание таблицы "rowTable"
 4. ```\dt``` - проверяем создалась ли таблица
@@ -35,7 +35,7 @@
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 1. ```cd ../client```
 2. ```npm install```
-3. В файле проекта ```client/src/actions/request.js``` ставим домен сервера, на который будет делаться запрос, *у меня http://localhost:5000*.
+3. В файле проекта ```client/src/actions/request.js``` ставим домен сервера, на который будет делаться запрос, *у меня localhost:5000*.
 4. ```npm start```
 
 ---
