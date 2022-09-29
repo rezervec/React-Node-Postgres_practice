@@ -49,3 +49,6 @@
 - __Пагинация__ и динамическое сокращение количества страниц
 - Данные таблицы хранятся в __PostgreSQL__
 - Таблица работает без перезагрузки страницы
+
+![Screenshot](https://github.com/rezervec/React-Node-Postgres_practice/raw/master/screenshots/screen1.jpg)
+![Screenshot](https://github.com/rezervec/React-Node-Postgres_practice/raw/master/screenshots/screen2.jpg)
